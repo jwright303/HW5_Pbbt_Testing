@@ -1,0 +1,13 @@
+title: My Tests
+suite: all
+tests:
+- py: |
+    print "Hello, World!"
+- sh: echo Hello World!
+  if: testScr
+- py: testScr.py
+- title: Second Tests
+  tests:
+  - py: |
+      print 5 * 2 - 1
+  - sh: [cat, someFile.txt]
